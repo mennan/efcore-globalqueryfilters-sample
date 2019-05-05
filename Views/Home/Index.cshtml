@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var users = (List<User>)ViewBag.Users;
+    var allUsers = (List<User>)ViewBag.AllUsers;
+}
+
+<h2>With Global Query Filters</h2>
+<ul>
+    @foreach (var user in users)
+    {
+        <li>
+            @user.Name - @user.UserName
+        </li>
+    }
+</ul>
+
+<h2>Ignored Global Query Filters</h2>
+<ul>
+    @foreach (var user in allUsers)
+    {
+        <li>
+            @user.Name - @user.UserName
+        </li>
+    }
+</ul>
